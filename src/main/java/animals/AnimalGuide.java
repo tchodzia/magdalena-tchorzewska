@@ -1,3 +1,5 @@
+package animals;
+
 public class AnimalGuide {
     public void feedMonkey(Monkey monkey) {
         System.out.println("Caretaker feeds monkey:");

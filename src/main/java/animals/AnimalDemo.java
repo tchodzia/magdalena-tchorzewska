@@ -1,3 +1,5 @@
+package animals;
+
 import java.util.ArrayList;
 
 public class AnimalDemo {
@@ -27,11 +29,11 @@ public class AnimalDemo {
             animal.makeSound();
         }
 /*
-        Animal animal = new Whale();
+        animals.Animal animal = new animals.Whale();
         animal.makeSound();
-        animal = new Monkey();
+        animal = new animals.Monkey();
         animal.makeSound();
-        animal = new Cow();
+        animal = new animals.Cow();
         animal.makeSound();
         */
     }
