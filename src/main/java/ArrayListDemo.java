@@ -15,10 +15,14 @@ public class ArrayListDemo {
         names.set(3, "Barbara");
         names.add(2, "Jerzy");
 
+
+        int size = names.size();
+        System.out.println(size);
         System.out.println(names);
         names.remove("Barbara");
         System.out.println(names);
 
+        ArrayList<Integer> arrNumbers = new ArrayList<>();
 
     }
 }
