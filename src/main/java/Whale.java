@@ -15,7 +15,10 @@ public class Whale extends Animal {
         this.age = 30;
         this.weight = 6;
     }
-
+    @Override
+    public void makeSound() {
+        System.out.println("Boooooooing!");
+    }
     @Override
     public String toString() {
         return "Whale{" +

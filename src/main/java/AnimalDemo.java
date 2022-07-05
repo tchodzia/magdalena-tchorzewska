@@ -8,6 +8,8 @@ public class AnimalDemo {
         Whale whale1 = new Whale();
         Whale whale2 = new Whale("Moby Dick", 20, 4);
 
+        Cow cow = new Cow();
+
         System.out.println(monkey1);
         System.out.println(monkey2);
         System.out.println(whale1);
@@ -18,10 +20,19 @@ public class AnimalDemo {
         animals.add(monkey2);
         animals.add(whale1);
         animals.add(whale2);
+        animals.add(cow);
 
         for (Animal animal : animals) {
             animal.eat();
+            animal.makeSound();
         }
-
+/*
+        Animal animal = new Whale();
+        animal.makeSound();
+        animal = new Monkey();
+        animal.makeSound();
+        animal = new Cow();
+        animal.makeSound();
+        */
     }
 }
