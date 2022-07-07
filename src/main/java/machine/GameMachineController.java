@@ -36,8 +36,8 @@ public class GameMachineController {
             return false;
         } else if (game.price < gameMachine.getPaidAmount()) {
             System.out.println("You paid more (" + gameMachine.getPaidAmount() + ") than price.");
-            System.out.println("Return amount: " + ((double) gameMachine.getPaidAmount() - game.price));
-            return false;
+            System.out.println("Return amount: " + (gameMachine.getPaidAmount() - game.price));
+            return true;
         } else {
             System.out.println("You bought a game!");
             return true;
