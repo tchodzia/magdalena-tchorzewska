@@ -33,6 +33,7 @@ public class GameMachineController {
         gameMachine.pay(amount);
         if (game.price > gameMachine.getPaidAmount()) {
             System.out.println("You paid " + gameMachine.getPaidAmount() + " only.");
+            //throw new GameMachineControllerException("");
             return false;
         } else if (game.price < gameMachine.getPaidAmount()) {
             System.out.println("You paid more (" + gameMachine.getPaidAmount() + ") than price.");
