@@ -9,10 +9,13 @@ import java.util.Scanner;
 public class FileInput {
 
 
-    public List<Book> readBooks() throws BookMappingException{
+    public List<Book> readBooks() throws BookMappingException, FileDBNotConnectionException {
         List<Book> booksList = new ArrayList<>();
-        File file = new File("src\\main\\java\\exceptions\\ksiazki.txt");
+        File file = null;
+
+
         try {
+            file = new File("src\\main\\java\\exceptions\\ksiazki.txt");
             Scanner scanner = new Scanner(file);
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine();
@@ -44,8 +47,12 @@ public class FileInput {
 
     public static void main(String[] args) {
         FileInput input = new FileInput();
-        try{
+        try {
             System.out.println(input.readBooks());
+        } catch (FileDBNotConnectionException e) {
+            System.out.println("Wystąpił wyjątek:");
+            System.out.println(e.getMessage());
+
         }catch (BookMappingException e){
             System.out.println("Wystąpił wyjątek:");
             System.out.println(e.getMessage());
