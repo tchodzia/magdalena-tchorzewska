@@ -1,0 +1,6 @@
+DOOM;25
+Age of Empires;50
+Diablo I;100
+Diablo II;300
+Diablo III;200
+Dungeon's siege;45
