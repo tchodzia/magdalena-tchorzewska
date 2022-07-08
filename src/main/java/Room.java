@@ -1,8 +1,12 @@
+import java.util.ArrayList;
+
 public class Room {
     private int roomNumber;
     private int roomSize;
     private boolean isBathroom;
     private boolean isAvailable;
+
+    private ArrayList<Guest> guests = new ArrayList<>();
 
     public Room(int roomNumber, int roomSize, boolean isBathroom, boolean isAvailable) {
         this.roomNumber = roomNumber;
@@ -27,5 +31,13 @@ public class Room {
                 ", isBathroom=" + isBathroom +
                 ", isAvailable=" + isAvailable +
                 '}';
+    }
+
+    public void checkIn(Guest guest) {
+        guests.add(guest);
+    }
+
+    public void checkOut(Guest guest) {
+        guests.remove(guest);
     }
 }
