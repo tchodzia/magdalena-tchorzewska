@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class HotelDemo {
+public class HotelService {
     public static void main(String[] args) {
         Hotel hotel = new Hotel();
 
@@ -41,7 +41,9 @@ public class HotelDemo {
                 case 1:
                     System.out.println("Give room number to check-in: ");
                     roomNumber = scanner.nextInt();
-                    userService.bookRoom(roomNumber);
+                    if(!userService.bookRoom(roomNumber)) {
+                        System.out.println("Room is not available.");
+                    }
                     break;
                 case 2:
                     System.out.println("Give room number to check-out: ");
@@ -61,6 +63,4 @@ public class HotelDemo {
             }
         } while (run);
     }
-
-
 }
