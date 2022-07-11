@@ -37,7 +37,17 @@ public class Room {
         guests.add(guest);
     }
 
+    public void checkIn(ArrayList<Guest> guests) {
+        for (Guest guest : guests) {
+            this.guests.add(guest);
+        }
+    }
+
     public void checkOut(Guest guest) {
         guests.remove(guest);
+    }
+
+    public ArrayList<Guest> showGuestInRoom() {
+        return guests;
     }
 }

@@ -32,10 +32,4 @@ public class Hotel {
             }
         }
     }
-
-    public void showAllRoomList() {
-        for(Room room : rooms) {
-            System.out.println(room);
-        }
-    }
 }
