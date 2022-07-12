@@ -48,7 +48,7 @@ public class RoomDemo {
                 default:
                     break;
             }
-        1} while(run);
+        } while(run);
 
     }
 }
